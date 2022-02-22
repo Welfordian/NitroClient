@@ -1,0 +1,89 @@
+.nitro-room-chatinput-component {
+    position: fixed;
+    display: flex;
+    bottom: 19px;
+    left: 375px;
+    pointer-events: none;
+    z-index: $chatinput-zindex;
+
+    .chatinput-container {
+        position: relative;
+        height: 45px;
+        border-radius: 10px;
+        border: 1px solid rgb(0, 0, 0);
+        background: #EDEDED;
+        pointer-events: all;
+        padding-right:30px;
+        width:100%;
+
+        .input-sizer {
+            display: inline-grid;
+            vertical-align: top;
+            align-items: center;
+            position: relative;
+            height: 100%;
+            padding:0 10px;
+            
+            &::after,
+            input,
+            textarea {
+              width: auto;
+              min-width: 1em;
+              grid-area: 1 / 2;
+              font: inherit;
+              margin: 0;
+              resize: none;
+              background: none;
+              appearance: none;
+              border: none;
+            }
+            
+            
+            &::after {
+              content: attr(data-value) '  ';
+              visibility: hidden;
+              white-space: pre-wrap;
+            }
+          }
+
+        .chat-input {
+            height: 100%;
+            font-size: 18px;
+            outline: 0;
+            border: 0;
+            position: relative;
+            background: transparent;
+        }
+
+        &:after {
+            content: "";
+            position: absolute;
+            top:0;
+            bottom:0;
+            margin: auto;
+            left:-8.5px;
+            height: 15px;
+            width: 15px;
+            background: #EDEDED;
+            transform: rotate(45deg);
+            border-left: 1px solid #000;
+            border-bottom: 1px solid #000;
+        }
+
+        &:before {
+            content: "";
+            position: absolute;
+            width: 98%;
+            height: 5px;
+            border-radius: 5px;
+            top: 3px;
+            left: 0;
+            right: 0;
+            margin: auto;
+            background: rgb(255, 255, 255);
+            z-index: 1;
+        }
+    }
+}
+
+@import './styleselector';

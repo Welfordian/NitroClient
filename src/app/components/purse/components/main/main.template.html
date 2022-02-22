@@ -1,0 +1,24 @@
+<div class="nitro-purse-component float-right">
+    <div class="position-relative mb-1">
+        <div class="row px-0 mx-0">
+            <ng-container *ngFor="let currency of currencies | keyvalue">
+                <div class="col item-detail btn btn-primary rounded d-flex nohover" *ngIf="isVisible(currency.key)">
+                    <div class="d-flex flex-grow-1 align-items-center justify-content-end detail-value">
+                        {{ currency.value | shortNumber }}</div>
+                    <div class="detail-icon bg-secondary" 
+                    [ngClass]="{ 'bg-pink' : currency.key == 0, 'bg-warning': currency.key == -1, 'bg-skyBlue': currency.key == 5 }">
+                        <div class="w-100 h-100" nitro-currency-icon [type]="currency.key"></div>
+                    </div>
+                </div>
+            </ng-container>
+            <div class="col item-detail btn btn-primary rounded d-flex nohover">
+                <div class="d-flex flex-grow-1 align-items-center justify-content-end detail-value">
+                    {{ hcDay }}
+                </div>
+                <div class="detail-icon bg-orange">
+                    <div class="w-100 h-100" nitro-currency-icon [type]="'hc'"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

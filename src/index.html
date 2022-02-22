@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Nitro</title>
+    <base href="./">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, shrink-to-fit=no">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <app-root></app-root>
+    <script>
+        var NitroConfig = {
+            "config.urls": ("%NG_APP_CONFIG_URLS%").split(','),
+            "sso.ticket": (new URLSearchParams(window.location.search).get('sso') || null),
+            "socket.url": "ws://localhost:2096",
+            "asset.url": "%NG_APP_ASSET_URL%",
+            "image.library.url": "%NG_APP_IMAGE_LIBRARY_URL%",
+            "hof.furni.url": "%NG_APP_HOF_FURNI_URL%",
+            "url.prefix": "%NG_APP_URL_PREFIX%"
+        };
+    </script>
+</body>
+</html>
