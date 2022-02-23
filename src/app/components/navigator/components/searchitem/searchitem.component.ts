@@ -20,10 +20,12 @@ export class NavigatorSearchItemComponent
     constructor(
         private _navigatorService: NavigatorService,
         private _ngZone: NgZone)
-    {}
+    {
+    }
 
     public visit(): void
     {
+        console.log(this.room);
         if(this.room.ownerId !== Nitro.instance.sessionDataManager.userId)
         {
             if(this.room.habboGroupId !== 0)

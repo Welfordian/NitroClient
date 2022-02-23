@@ -35,7 +35,7 @@ export class RoomChatFormatterPipe implements PipeTransform
         this._allowedColors.set('pink', 'pink');
     }
 
-    public transform(content: string): SafeHtml
+    public transform(content: any): SafeHtml
     {
         let result = '';
 

@@ -12,6 +12,7 @@
 	<div class="form-group">
 		<label>How often can a user be rewarded</label>
 		<select class="form-control form-control-sm" [(ngModel)]="rewardTime" [class.mb-2]="!hasIntervalValue">
+			<option [value]="SETTING_EVERYTIME" [selected]="rewardTime == SETTING_EVERYTIME">Every Time</option>
 			<option [value]="SETTING_ONCE" [selected]="rewardTime == SETTING_ONCE">Once</option>
 			<option [value]="SETTING_N_MINS" [selected]="rewardTime == SETTING_N_MINS">1/n minutes</option>
 			<option [value]="SETTING_N_HOURS" [selected]="rewardTime == SETTING_N_HOURS">1/n hours</option>

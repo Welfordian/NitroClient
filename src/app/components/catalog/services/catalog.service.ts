@@ -172,8 +172,6 @@ export class CatalogService implements OnDestroy
 
             this._isLoading = false;
 
-            console.log(this.catalogRoot);
-
             (this._component && this._component.selectFirstTab());
         });
     }

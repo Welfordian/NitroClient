@@ -15,6 +15,7 @@ export class GiveRewardComponent extends WiredAction
 
     public static CODE: number = WiredActionType.GIVE_REWARD;
 
+    public readonly SETTING_EVERYTIME: string = '-1';
     public readonly SETTING_ONCE: string = '0';
     public readonly SETTING_N_MINS: string = '3';
     public readonly SETTING_N_HOURS: string = '2';

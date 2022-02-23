@@ -13,7 +13,15 @@
     
             .item-detail {
                 height: 40px;
-                max-height: 40px;
+                max-height: 180px;
+
+                &.has-image {
+                    height: 180px;
+                }
+
+                img {
+                    width: 100%;
+                }
             }
         }
     }

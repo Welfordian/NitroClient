@@ -35,6 +35,7 @@ export class RoomWidgetChatUpdateEvent extends RoomWidgetUpdateEvent
     constructor(k: string, userId: number, text: string, userName: string, userCategory: number, userType: number, petType: number, userX: number, userY: number, userImage: HTMLImageElement, userColor: number, roomId: number, chatType: number = 0, styleId: number = 0, links: string[] = null)
     {
         super(k);
+        
         this._userId = userId;
         this._text = text;
         this._chatType = chatType;

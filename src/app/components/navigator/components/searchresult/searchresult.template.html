@@ -7,7 +7,7 @@
     </h6>
 </div>
 <div *ngIf="isCollapsed && (result.rooms.length > 0)" class="d-flex flex-column pt-2 grid-container">
-    <div class="grid-items" [ngClass]="{ 'grid-2': (displayMode >= 1), 'grid-1': (displayMode === 0) }">
-        <div nitro-navigator-search-result-item-component *ngFor="let room of result.rooms" class="d-flex flex-column item-detail justify-content-center align-items-center" [room]="room" [displayMode]="displayMode" [ngClass]="{ 'tall-detail': (displayMode >= 1) }"></div>
+    <div class="grid-items grid-1" [ngClass]="{ 'grid-3': (displayMode >= 1), 'grid-1': (displayMode === 0) }">
+        <div nitro-navigator-search-result-item-component *ngFor="let room of result.rooms" class="d-flex flex-column item-detail justify-content-center align-items-center" [room]="room" [displayMode]="displayMode" [ngClass]="{ 'tall-detail': (displayMode >= 1), 'has-image': (room.naviImageUrl !== '') }"></div>
     </div>
 </div>
