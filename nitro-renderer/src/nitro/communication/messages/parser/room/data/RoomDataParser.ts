@@ -43,7 +43,6 @@ export class RoomDataParser
     private _canMute: boolean;
     private _roomPicker: boolean;
     private _officialRoomPicRef: string;
-    private _naviImageUrl: string;
 
     constructor(wrapper: IMessageDataWrapper)
     {
@@ -104,7 +103,6 @@ export class RoomDataParser
         this._score         = wrapper.readInt();
         this._ranking       = wrapper.readInt();
         this._categoryId    = wrapper.readInt();
-        this._naviImageUrl  = wrapper.readString();
 
         this.parseTags(wrapper);
 
@@ -164,11 +162,6 @@ export class RoomDataParser
     public get roomId(): number
     {
         return this._roomId;
-    }
-
-    public get naviImageUrl(): string
-    {
-        return this._naviImageUrl;
     }
 
     public get roomName(): string
